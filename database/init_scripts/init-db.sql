@@ -1,0 +1,1 @@
+CREATE DATABASE gooddelo_test_case;
