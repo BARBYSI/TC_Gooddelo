@@ -34,8 +34,10 @@ services:
     depends_on:
       - postgresql
 
-  # generator:
-  #   build: ./service-generator
-  #   ports:
-  #     - "8080:8080"
-  #   restart: always
+  generator:
+    build: ./service-generator
+    ports:
+      - "8000:8000"
+    restart: always
+    depends_on:
+      - api

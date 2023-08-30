@@ -1,4 +1,4 @@
-FROM python:3.12
+FROM python:3.10-slim
 
 COPY requirements.txt .
 RUN pip install -r requirements.txt
@@ -6,4 +6,5 @@ RUN pip install -r requirements.txt
 COPY . /service-generator
 WORKDIR /service-generator
 
-CMD ["python", "main.py"]
+
+CMD sleep 5 && python main.py
